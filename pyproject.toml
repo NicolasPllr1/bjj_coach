@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "bjjcoach"
+version = "0.1.0"
+description = ""
+authors = ["NicolasPllr1 <nicolas.pllr1@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+pandas = "^2.1.1"
+insta-scrape = "^2.1.2"
+numpy = "^1.26.1"
+tqdm = "^4.66.1"
+ipykernel = "^6.25.2"
+instagramy = "^4.5"
+instaloader = "^4.10.1"
+transformers = "^4.34.1"
+torch = ">=2.0.0, !=2.0.1, !=2.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
