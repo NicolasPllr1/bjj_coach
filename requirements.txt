@@ -1,0 +1,14 @@
+# to build the Gradio web-app
+gradio
+# to fetch and train the model with QLoRA
+torch
+transformers
+bitsandbytes
+accelerate
+peft
+# to scrape instagram and build the training dataset
+instaloader
+pandas
+datasets
+
+
