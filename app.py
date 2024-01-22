@@ -3,8 +3,6 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 import sys
 
 
-
-
 def generate_text(prompt):
     inputs = tokenizer(prompt, return_tensors="pt", max_length=500, truncation=True)
     outputs = model.generate(**inputs)
@@ -14,9 +12,9 @@ def generate_text(prompt):
 
 def load_model(model_name):
     # Load the chosen fine-tuned model and its tokenizer
-    
-    TOKENIZERS_PATH = "" # path to the fine-tuned tokenizer
-    MODELS_PATH = "" # path to the fine-tuned model
+
+    TOKENIZERS_PATH = ""  # path to the fine-tuned tokenizer
+    MODELS_PATH = ""  # path to the fine-tuned model
     try:
         model = AutoModelForCausalLM.from_pretrained(model_name)
         tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -25,8 +23,8 @@ def load_model(model_name):
         print(f"Error loading model: {e}")
         sys.exit(1)
 
-def gradio_app(model_name):
 
+def gradio_app(model_name):
     # Load the model and its tokenizer
     global model, tokenizer
     model, tokenizer = load_model(model_name)
@@ -45,16 +43,14 @@ def gradio_app(model_name):
     iface.launch()
 
 
-
-
 # python app.py model_name
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: python app.py <model_name>")
         sys.exit(1)
-    
+
     # Retrieve the model name from the command line
     model_name_arg = sys.argv[1]
-    
+
     # Launch the Gradio interface
     gradio_app(model_name_arg)
