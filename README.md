@@ -24,6 +24,13 @@ We utilize the *QLoRA* training to greatly reduce both the training computationa
 ## Gradio Web-App
 We build a simple gradio app to demo the model.
 
+<!-- ROADMAP -->
+## Roadmap
+- [ ] Add possibility to choose an open-source LLM and lauch a fine-tuning job easily
+- [ ] Instead of fine-tuning, explore RAG solutions
+- [ ] Instead of fine-tuning, try to build an instruct-like dataset and compare different methods like RLHF and DPO
+
+
 <!-- GETTING STARTED -->
 ## Getting Started
 
